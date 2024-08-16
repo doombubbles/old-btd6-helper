@@ -11,4 +11,6 @@ public static class ModHelperData
 
     public const string RepoOwner = "doombubbles";
     public const string RepoName = "old-btd6-helper";
+
+    public const bool ManualDownload = true;
 }
