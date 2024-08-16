@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldBtd6Helper", "OldBtd6Helper.csproj", "{561A9956-B233-4A83-87E5-D886071BC206}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Latest|Any CPU = Latest|Any CPU
+		v44|Any CPU = v44|Any CPU
+		v43|Any CPU = v43|Any CPU
+		v42|Any CPU = v42|Any CPU
+		v41|Any CPU = v41|Any CPU
+		v40|Any CPU = v40|Any CPU
+		v39|Any CPU = v39|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{561A9956-B233-4A83-87E5-D886071BC206}.v43|Any CPU.ActiveCfg = v43|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v43|Any CPU.Build.0 = v43|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v42|Any CPU.ActiveCfg = v42|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v42|Any CPU.Build.0 = v42|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v41|Any CPU.ActiveCfg = v41|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v41|Any CPU.Build.0 = v41|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v40|Any CPU.ActiveCfg = v40|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v40|Any CPU.Build.0 = v40|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v39|Any CPU.ActiveCfg = v39|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v39|Any CPU.Build.0 = v39|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.Latest|Any CPU.ActiveCfg = Latest|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.Latest|Any CPU.Build.0 = Latest|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED8C0DB6-D308-4167-936E-835A3A5386AA}
+	EndGlobalSection
+EndGlobal

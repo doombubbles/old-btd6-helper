@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>OldBtd6Helper</RootNamespace>
+        <Configurations>Latest;v44;v43;v42;v41;v40;v39</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>OldBtd6Helper</AssemblyName>
+        <LangVersion>preview</LangVersion>
+        <Platforms>AnyCPU</Platforms>
+        <JustMelonloader>true</JustMelonloader>
+    </PropertyGroup>
+
+    <Import Project="../btd6.targets"/>
+    
+    <ItemGroup>
+        <Content Include=".github\workflows\build.yml"/>
+      <EmbeddedResource Include="Resources\roundSets.json" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <BloonsTD6 Condition="'$(Configuration)' != 'Latest'">$(BloonsTD6)$(Configuration)</BloonsTD6>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v39' ">
+        <DefineConstants>V39_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper39</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v40' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper40</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v41' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper41</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v42' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper42</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v43' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper43</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v44' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper44</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Latest' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER</DefineConstants>
+    </PropertyGroup>
+
+    <Import Project="btd6.targets"/>
+    
+</Project>
