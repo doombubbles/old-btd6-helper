@@ -6,7 +6,7 @@
 Old BTD6 Helper
 </h1>
 
-### A mod that helps you play older versions of BTD6 in offline mode on separate profiles.
+### Play old versions of BTD6 in offline mode on separate profiles.
 
 ### What this mod **DOES NOT** do:
 - Make any changes to your normal BTD6 Profile
@@ -38,8 +38,6 @@ steam://open/console
 
 (Takes a few seconds before it actually opens)
 
-![Steam Console Screenshot](ScreenshotConsole.png)
-
 ### Depot Download Commands
 
 From the Steam console you can then run a command to download the associated game version.
@@ -60,7 +58,7 @@ download_depot 960090 960091 6288166319192838291
 
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.21/Btd6ModHelper.dll">3.1.21</a></td>
-<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/downloads/OldBtd6Helper43.dll">Latest v43</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper43.dll">Latest v43</a></td>
 </tr>
 <tr></tr>
 
@@ -76,7 +74,7 @@ download_depot 960090 960091 6396713242457093672
 
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.20/Btd6ModHelper.dll">3.1.20</a></td>
-<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/downloads/OldBtd6Helper42.dll">Latest v42</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper42.dll">Latest v42</a></td>
 </tr>
 <tr></tr>
 
@@ -92,7 +90,7 @@ download_depot 960090 960091 2075160629501092475
 
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.17/Btd6ModHelper.dll">3.1.17</a></td>
-<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/downloads/OldBtd6Helper41.dll">Latest v41</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper41.dll">Latest v41</a></td>
 </tr>
 <tr></tr>
 
@@ -108,7 +106,7 @@ download_depot 960090 960091 7051754864164438105
 
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.16/Btd6ModHelper.dll">3.1.16</a></td>
-<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/downloads/OldBtd6Helper40.dll">Latest v40</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper40.dll">Latest v40</a></td>
 </tr>
 <tr></tr>
 
@@ -124,7 +122,7 @@ download_depot 960090 960091 7764235853680216941
 
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.15/Btd6ModHelper.dll">3.1.15</a></td>
-<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/downloads/OldBtd6Helper39.dll">Latest v39</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper39.dll">Latest v39</a></td>
 </tr>
 <tr></tr>
 
@@ -133,6 +131,8 @@ download_depot 960090 960091 7764235853680216941
 [See SteamDB for a full list of manifests](https://steamdb.info/depot/960091/manifests/)
 
 Further back versions may become officially supported at a later time.
+
+![Steam Console Screenshot](ScreenshotConsole.png)
 
 ### Move Downloaded Depot
 
