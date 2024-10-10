@@ -14,6 +14,7 @@ Global
 		v41|Any CPU = v41|Any CPU
 		v40|Any CPU = v40|Any CPU
 		v39|Any CPU = v39|Any CPU
+		v45|Any CPU = v45|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{561A9956-B233-4A83-87E5-D886071BC206}.v43|Any CPU.ActiveCfg = v43|Any CPU
@@ -28,6 +29,8 @@ Global
 		{561A9956-B233-4A83-87E5-D886071BC206}.v39|Any CPU.Build.0 = v39|Any CPU
 		{561A9956-B233-4A83-87E5-D886071BC206}.Latest|Any CPU.ActiveCfg = Latest|Any CPU
 		{561A9956-B233-4A83-87E5-D886071BC206}.Latest|Any CPU.Build.0 = Latest|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v45|Any CPU.ActiveCfg = v45|Any CPU
+		{561A9956-B233-4A83-87E5-D886071BC206}.v45|Any CPU.Build.0 = v45|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,7 +2,7 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>OldBtd6Helper</RootNamespace>
-        <Configurations>Latest;v44;v43;v42;v41;v40;v39</Configurations>
+        <Configurations>Latest;v45;v44;v43;v42;v41;v40;v39</Configurations>
         <Nullable>enable</Nullable>
         <AssemblyName>OldBtd6Helper</AssemblyName>
         <LangVersion>preview</LangVersion>
@@ -50,9 +50,14 @@
         <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER</DefineConstants>
         <ProjectName>OldBtd6Helper44</ProjectName>
     </PropertyGroup>
+    
+    <PropertyGroup Condition=" '$(Configuration)' == 'v45' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper45</ProjectName>
+    </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Latest' ">
-        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER</DefineConstants>
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER</DefineConstants>
     </PropertyGroup>
 
     <Import Project="btd6.targets"/>

@@ -49,6 +49,22 @@ The following are the specific depots used to test this mod on.
 </tr>
 
 <tr>
+<td align="center">v44.1</td>
+<td>
+
+```
+download_depot 960090 960091 8790619034499416422
+```
+
+</td>
+<td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.2.1/Btd6ModHelper.dll">3.2.1</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper44.dll">Latest v44</a></td>
+</tr>
+<tr></tr>
+
+
+
+<tr>
 <td align="center">v43.3</td>
 <td>
 
