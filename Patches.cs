@@ -1,5 +1,7 @@
 ﻿using System.IO;
+using System.Linq;
 using HarmonyLib;
+using Il2CppAssets.Scripts.Data;
 using Il2CppAssets.Scripts.Data.Quests;
 using Il2CppAssets.Scripts.Models.Profile;
 using Il2CppAssets.Scripts.Unity;
@@ -12,19 +14,15 @@ using Il2CppAssets.Scripts.Utils;
 using Il2CppFacepunch.Steamworks;
 using Il2CppSystem.Threading.Tasks;
 using UnityEngine;
-using StringReader = Il2CppSystem.IO.StringReader;
 
 #if V40_OR_GREATER
 using System.Text;
-using BTD_Mod_Helper.Api;
 using BTD_Mod_Helper.Api.Components;
 using BTD_Mod_Helper.Api.Enums;
-using BTD_Mod_Helper.Api.Helpers;
 using BTD_Mod_Helper.Extensions;
 using Il2CppAssets.Scripts.Models.Gameplay.Mods;
 using Il2CppAssets.Scripts.Models.ServerEvents;
 using Il2CppAssets.Scripts.Unity.Menu;
-using Il2CppAssets.Scripts.Unity.UI_New.ChallengeEditor;
 using Il2CppAssets.Scripts.Unity.UI_New.DailyChallenge;
 using Il2CppAssets.Scripts.Unity.UI_New.Main.EventPanel;
 using Il2CppNewtonsoft.Json;
@@ -60,6 +58,103 @@ internal static class AnalyticsManager_PlayerLoaded
         if (player.Data.HasCompletedTutorial) return;
         player.Data.HasCompletedTutorial = true;
         player.Data.hasUnlockedMapEditor = true;
+    }
+}
+/// <summary>
+/// Prevent this free progress from being actually saved
+/// </summary>
+[HarmonyPatch(typeof(Btd6Player), nameof(Btd6Player.SaveNow))]
+internal class Btd6Player_SaveNow
+{
+    [HarmonyPrefix]
+    internal static void Prefix(Btd6Player __instance)
+    {
+        if (__instance.Data?.HasCompletedTutorial != true ||
+            !OldBtd6HelperMod.SuccessfullyPatchedProfilePath) return;
+
+        var profile = __instance.Data;
+
+        profile.rank.Value = 1;
+        profile.xp.Value = 0;
+
+        profile.unlockedTowers.Clear();
+        profile.towerXp.Clear();
+        profile.acquiredUpgrades.Clear();
+        profile.savedStats.Clear();
+        profile.unlockedHeroes.Clear();
+        profile.unlockedTowerSkins.Clear();
+        profile.KnowledgePoints = 0;
+        profile.acquiredKnowledge.Clear();
+    }
+
+    [HarmonyPostfix]
+    internal static void Postfix(Btd6Player __instance)
+    {
+        if (__instance.Data?.HasCompletedTutorial != true ||
+            !OldBtd6HelperMod.SuccessfullyPatchedProfilePath) return;
+
+        var player = Game.Player;
+        player.Data.rank.Value = 42;
+        player.Data.xp.Value = 964000 + 42;
+
+        foreach (var tower in Game.instance.model.towerSet)
+        {
+            player.UnlockTower(tower.towerId);
+            player.AddTowerXP(tower.towerId, 42);
+            foreach (var upgrade in Game.instance.model.GetTowersWithBaseId(tower.towerId)
+                         .SelectMany(t => t.appliedUpgrades).Distinct())
+            {
+                player.AcquireUpgrade(tower.towerId, upgrade, 0);
+            }
+        }
+
+        foreach (var hero in Game.instance.model.heroSet)
+        {
+            player.UnlockHero(hero.towerId);
+            player.SeenHeroUnlocked(hero.towerId);
+            player.SeenNewHeroNotification(hero.towerId);
+        }
+
+        player.SeenHeroUnlockedNotification();
+
+        foreach (var knowledge in Game.instance.model.allKnowledge)
+        {
+            player.AcquireKnowledge(knowledge.name);
+        }
+
+        player.Data.KnowledgePoints = 0;
+
+        foreach (var map in GameData.Instance.mapSet.Maps.items)
+        {
+            player.UnlockMap(map.id);
+        }
+
+        foreach (var skin in GameData.Instance.skinsData.SkinList.items)
+        {
+            player.SeenTowerSkin(skin.name);
+        }
+
+        foreach (var quest in GameData.Instance.questData.quests)
+        {
+#if V42_OR_GREATER
+            var questSaveData = player.GetQuestSaveData(quest.id);
+#else
+            player.GetQuestSaveData(quest.id, out var questSaveData);
+#endif
+            questSaveData.hasSeenQuest = true;
+        }
+
+        player.Data.unlockedBigBloons = true;
+        player.Data.unlockedSmallBloons = true;
+        player.Data.unlockedSmallTowers = true;
+        player.Data.unlockedBigTowers = true;
+
+#if V44_OR_GREATER
+#else
+        player.Data.seenIntermediateUnlock = true;
+        player.Data.seenAdvancedUnlock = true;
+        player.Data.seenExpertUnlock = true;
+#endif
     }
 }
 

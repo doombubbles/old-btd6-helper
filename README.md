@@ -171,7 +171,7 @@ Now that you have the old build, simply follow the standard [Mod Helper Install 
 except you'll need to install an old build of Mod Helper appropriate for the version you've downloaded.
 The table above contains the links to the recommended downloads of Mod Helper for each of the game versions.
 
-**Remember to specifically install MelonLoader 0.6.1.**
+## Reminder: Specifically Install MelonLoader 0.6.1 for BTD6 versions before v45
 
 ![Game Folder Screenshot](ScreenshotFolder.png)
 
