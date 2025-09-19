@@ -2,7 +2,7 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>OldBtd6Helper</RootNamespace>
-        <Configurations>Latest;v45;v44;v43;v42;v41;v40;v39</Configurations>
+        <Configurations>Latest;v50;v49;v48;v47;v46;v45;v44;v43;v42;v41;v40;v39</Configurations>
         <Nullable>enable</Nullable>
         <AssemblyName>OldBtd6Helper</AssemblyName>
         <LangVersion>preview</LangVersion>
@@ -11,7 +11,7 @@
     </PropertyGroup>
 
     <Import Project="../btd6.targets"/>
-    
+
     <ItemGroup>
         <Content Include=".github\workflows\build.yml"/>
       <EmbeddedResource Include="Resources\roundSets.json" />
@@ -50,16 +50,41 @@
         <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER</DefineConstants>
         <ProjectName>OldBtd6Helper44</ProjectName>
     </PropertyGroup>
-    
+
     <PropertyGroup Condition=" '$(Configuration)' == 'v45' ">
         <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER</DefineConstants>
         <ProjectName>OldBtd6Helper45</ProjectName>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'v46' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER,V46_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper46</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v47' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER,V46_OR_GREATER,V47_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper47</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v48' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER,V46_OR_GREATER,V47_OR_GREATER,V48_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper48</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v49' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER,V46_OR_GREATER,V47_OR_GREATER,V48_OR_GREATER,V49_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper49</ProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'v50' ">
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER,V46_OR_GREATER,V47_OR_GREATER,V48_OR_GREATER,V49_OR_GREATER,V50_OR_GREATER</DefineConstants>
+        <ProjectName>OldBtd6Helper50</ProjectName>
+    </PropertyGroup>
+
     <PropertyGroup Condition=" '$(Configuration)' == 'Latest' ">
-        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER</DefineConstants>
+        <DefineConstants>V39_OR_GREATER,V40_OR_GREATER,V41_OR_GREATER,V42_OR_GREATER,V43_OR_GREATER,V44_OR_GREATER,V45_OR_GREATER,V46_OR_GREATER,V47_OR_GREATER,V48_OR_GREATER,V49_OR_GREATER,V50_OR_GREATER</DefineConstants>
     </PropertyGroup>
 
     <Import Project="btd6.targets"/>
-    
+
 </Project>

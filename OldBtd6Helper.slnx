@@ -1,0 +1,18 @@
+﻿<Solution>
+    <Configurations>
+        <BuildType Name="Latest"/>
+        <BuildType Name="v39"/>
+        <BuildType Name="v40"/>
+        <BuildType Name="v41"/>
+        <BuildType Name="v42"/>
+        <BuildType Name="v43"/>
+        <BuildType Name="v44"/>
+        <BuildType Name="v45"/>
+        <BuildType Name="v46"/>
+        <BuildType Name="v47"/>
+        <BuildType Name="v48"/>
+        <BuildType Name="v49"/>
+        <BuildType Name="v50"/>
+    </Configurations>
+    <Project Path="OldBtd6Helper.csproj" Type="Classic C#"/>
+</Solution>

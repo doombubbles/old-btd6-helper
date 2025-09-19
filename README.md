@@ -45,7 +45,7 @@ The following are the specific depots used to test this mod on.
 
 <table>
 <tr>
-    <th>BTD6 Version</th> <th>Download Depot Command</th> <th>Mod Helper</th> <th>OldBtd6Helper</th>
+    <th>BTD6 Version</th> <th>Download Depot Command</th> <th>Mod Helper</th> <th>OldBtd6Helper</th> <th>MelonLoader</th>
 </tr>
 
 <tr>
@@ -60,6 +60,96 @@ download_depot 960090 960091 4906192510925827002
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.4.12/Btd6ModHelper.dll">3.4.12</a></td>
 <td align="center">Not yet needed <!--<a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper50.dll">Latest v50</a>--></td>
+<td align="center">0.7.0</td>
+</tr>
+<tr></tr>
+
+
+<tr>
+<td align="center">v49.3</td>
+<td>
+
+
+```
+download_depot 960090 960091 1316670172502501766
+```
+
+</td>
+<td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.4.9/Btd6ModHelper.dll">3.4.9</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper49.dll">Latest v49</a></td>
+<td align="center">0.7.0</td>
+</tr>
+<tr></tr>
+
+
+
+<tr>
+<td align="center">v48.2</td>
+<td>
+
+
+```
+download_depot 960090 960091 3691166422551729471
+```
+
+</td>
+<td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.4.6/Btd6ModHelper.dll">3.4.6</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper48.dll">Latest v48</a></td>
+<td align="center">0.7.0</td>
+</tr>
+<tr></tr>
+
+
+
+<tr>
+<td align="center">v47.3</td>
+<td>
+
+
+```
+download_depot 960090 960091 6264464828396649625
+```
+
+</td>
+<td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.3.4/Btd6ModHelper.dll">3.4.1</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper47.dll">Latest v47</a></td>
+<td align="center">0.6.5</td>
+</tr>
+<tr></tr>
+
+
+
+<tr>
+<td align="center">v46.3</td>
+<td>
+
+
+```
+download_depot 960090 960091 8062406474933133215
+```
+
+</td>
+<td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.3.4/Btd6ModHelper.dll">3.3.4</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper46.dll">Latest v46</a></td>
+<td align="center">0.6.5</td>
+</tr>
+<tr></tr>
+
+
+
+<tr>
+<td align="center">v45.2</td>
+<td>
+
+
+```
+download_depot 960090 960091 4734389091244644798
+```
+
+</td>
+<td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.3.3/Btd6ModHelper.dll">3.3.3</a></td>
+<td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper45.dll">Latest v45</a></td>
+<td align="center">0.6.5</td>
 </tr>
 <tr></tr>
 
@@ -76,6 +166,7 @@ download_depot 960090 960091 8790619034499416422
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.2.1/Btd6ModHelper.dll">3.2.1</a></td>
 <td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper44.dll">Latest v44</a></td>
+<td align="center">0.6.1</td>
 </tr>
 <tr></tr>
 
@@ -92,6 +183,7 @@ download_depot 960090 960091 6288166319192838291
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.21/Btd6ModHelper.dll">3.1.21</a></td>
 <td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper43.dll">Latest v43</a></td>
+<td align="center">0.6.1</td>
 </tr>
 <tr></tr>
 
@@ -108,6 +200,7 @@ download_depot 960090 960091 6396713242457093672
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.20/Btd6ModHelper.dll">3.1.20</a></td>
 <td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper42.dll">Latest v42</a></td>
+<td align="center">0.6.1</td>
 </tr>
 <tr></tr>
 
@@ -124,6 +217,7 @@ download_depot 960090 960091 2075160629501092475
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.17/Btd6ModHelper.dll">3.1.17</a></td>
 <td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper41.dll">Latest v41</a></td>
+<td align="center">0.6.1</td>
 </tr>
 <tr></tr>
 
@@ -140,6 +234,7 @@ download_depot 960090 960091 7051754864164438105
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.16/Btd6ModHelper.dll">3.1.16</a></td>
 <td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper40.dll">Latest v40</a></td>
+<td align="center">0.6.1</td>
 </tr>
 <tr></tr>
 
@@ -156,6 +251,7 @@ download_depot 960090 960091 7764235853680216941
 </td>
 <td align="center"><a href="https://github.com/gurrenm3/BTD-Mod-Helper/releases/download/3.1.15/Btd6ModHelper.dll">3.1.15</a></td>
 <td align="center"><a href="https://github.com/doombubbles/old-btd6-helper/releases/latest/download/OldBtd6Helper39.dll">Latest v39</a></td>
+<td align="center">0.6.1</td>
 </tr>
 <tr></tr>
 

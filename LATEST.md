@@ -1,1 +1,1 @@
-- Fixed issue with maps not saving
+- Updated for recent BTD6 versions

@@ -15,6 +15,10 @@ using Il2CppFacepunch.Steamworks;
 using Il2CppSystem.Threading.Tasks;
 using UnityEngine;
 
+#if V50_OR_GREATER
+using Il2CppSystem.Linq;
+#endif
+
 #if V40_OR_GREATER
 using System.Text;
 using BTD_Mod_Helper.Api.Components;
@@ -55,11 +59,26 @@ internal static class AnalyticsManager_PlayerLoaded
     [HarmonyPostfix]
     internal static void Postfix(Btd6Player player)
     {
-        if (player.Data.HasCompletedTutorial) return;
+#if V50_OR_GREATER
+        var tutorialIncomplete = player.Data.tutorialTypeSelected != TutorialType.Original;
+#else
+        var tutorialIncomplete = player.Data.HasCompletedTutorial != true;
+#endif
+
+        if (!tutorialIncomplete) return;
+
+#if V50_OR_GREATER
+        player.Data.tutorialTypeSelected = TutorialType.Original;
+#else
         player.Data.HasCompletedTutorial = true;
+#endif
+
+
+
         player.Data.hasUnlockedMapEditor = true;
     }
 }
+
 /// <summary>
 /// Prevent this free progress from being actually saved
 /// </summary>
@@ -69,8 +88,13 @@ internal class Btd6Player_SaveNow
     [HarmonyPrefix]
     internal static void Prefix(Btd6Player __instance)
     {
-        if (__instance.Data?.HasCompletedTutorial != true ||
-            !OldBtd6HelperMod.SuccessfullyPatchedProfilePath) return;
+#if V50_OR_GREATER
+        var tutorialIncomplete = __instance.Data?.tutorialTypeSelected != TutorialType.Original;
+#else
+        var tutorialIncomplete = __instance.Data?.HasCompletedTutorial != true;
+#endif
+
+        if (tutorialIncomplete || !OldBtd6HelperMod.SuccessfullyPatchedProfilePath) return;
 
         var profile = __instance.Data;
 
@@ -90,8 +114,13 @@ internal class Btd6Player_SaveNow
     [HarmonyPostfix]
     internal static void Postfix(Btd6Player __instance)
     {
-        if (__instance.Data?.HasCompletedTutorial != true ||
-            !OldBtd6HelperMod.SuccessfullyPatchedProfilePath) return;
+#if V50_OR_GREATER
+        var tutorialIncomplete = __instance.Data?.tutorialTypeSelected != TutorialType.Original;
+#else
+        var tutorialIncomplete = __instance.Data?.HasCompletedTutorial != true;
+#endif
+
+        if (tutorialIncomplete || !OldBtd6HelperMod.SuccessfullyPatchedProfilePath) return;
 
         var player = Game.Player;
         player.Data.rank.Value = 42;
@@ -101,8 +130,14 @@ internal class Btd6Player_SaveNow
         {
             player.UnlockTower(tower.towerId);
             player.AddTowerXP(tower.towerId, 42);
-            foreach (var upgrade in Game.instance.model.GetTowersWithBaseId(tower.towerId)
-                         .SelectMany(t => t.appliedUpgrades).Distinct())
+
+#if V50_OR_GREATER
+            var towers = Game.instance.model.GetTowersWithBaseId(tower.towerId).ToArray();
+#else
+            var towers = Game.instance.model.GetTowersWithBaseId(tower.towerId);
+#endif
+
+            foreach (var upgrade in towers.SelectMany(t => t.appliedUpgrades).Distinct())
             {
                 player.AcquireUpgrade(tower.towerId, upgrade, 0);
             }
