@@ -9,15 +9,31 @@ Old BTD6 Helper
 ### Play old versions of BTD6 in offline mode on separate profiles.
 
 ### What this mod **DOES NOT** do:
+
 - Make any changes to your normal BTD6 Profile
 - Allow for *anything* unlocked on these separate profiles to be transferred to your normal BTD6 profile
 - Allow you to use actual Online Features like CO-OP / Map Browser / Trophy Store
 
 ### What this mod **DOES** do:
+
 - Enforces Offline Mode
 - Switches the local profile path to a separate, game version specific path
-- Skips the tutorial and gives new profiles a head start on tower/upgrade/map/knowledge unlock progression for testing purposes
+- Skips the tutorial and gives new profiles a head start on tower/upgrade/map/knowledge unlock progression for testing
+  purposes
 - Allows access to the local Challenge/Map/Odyssey Editors and Boss Challenges
+
+## Fix Unity Security Vulnerability
+
+On Oct 3rd 2025, the security vulnerability [CVE-2025-59489](https://www.cve.org/CVERecord?id=CVE-2025-59489) was
+published, and it applies to all previous BTD6 versions. It is strongly recommend that you download and
+use [Unity's patcher tool](https://discussions.unity.com/t/cve-2025-59489-patcher-tool/1688032) to fix it for any old
+BTD6 version you use. The steps to use it are:
+- Download the [latest Windows version of the patching tool](https://security-patches.unity.com/bc0977e0-21a9-4f6e-9414-4f44b242110a/unity-patcher/UnityApplicationPatcher-1.0.6-Win.zip)
+- Unzip the contents
+- Run UnityApplicationPatcher.exe
+- Go to the Windows tab on the left
+- Choose the path to UnityPlayer.dll in your old BTD6 install location
+- Click the Patch button
 
 ## How to Download Old Versions
 
@@ -28,7 +44,8 @@ games.
 
 Use this deep link to open the Steam Console (Control + Click for a new Tab)
 
-<a href="https://doombubbles.github.io/steam" title="GitHub doesn't directly allow non-HTTP(s) links, so this a redirect to steam://open/console from a GitHub Pages site">Open Steam Console</a>
+<a href="https://doombubbles.github.io/steam" title="GitHub doesn't directly allow non-HTTP(s) links, so this a redirect to steam://open/console from a GitHub Pages site">
+Open Steam Console</a>
 
 Or Copy this URL to a new Browser Tab
 
@@ -52,7 +69,6 @@ The following are the specific depots used to test this mod on.
 <td align="center">v50.2</td>
 <td>
 
-
 ```
 download_depot 960090 960091 4906192510925827002
 ```
@@ -68,7 +84,6 @@ download_depot 960090 960091 4906192510925827002
 <tr>
 <td align="center">v49.3</td>
 <td>
-
 
 ```
 download_depot 960090 960091 1316670172502501766
@@ -87,7 +102,6 @@ download_depot 960090 960091 1316670172502501766
 <td align="center">v48.2</td>
 <td>
 
-
 ```
 download_depot 960090 960091 3691166422551729471
 ```
@@ -104,7 +118,6 @@ download_depot 960090 960091 3691166422551729471
 <tr>
 <td align="center">v47.3</td>
 <td>
-
 
 ```
 download_depot 960090 960091 6264464828396649625
@@ -123,7 +136,6 @@ download_depot 960090 960091 6264464828396649625
 <td align="center">v46.3</td>
 <td>
 
-
 ```
 download_depot 960090 960091 8062406474933133215
 ```
@@ -140,7 +152,6 @@ download_depot 960090 960091 8062406474933133215
 <tr>
 <td align="center">v45.2</td>
 <td>
-
 
 ```
 download_depot 960090 960091 4734389091244644798
@@ -267,20 +278,23 @@ Further back versions may become officially supported at a later time.
 
 Even with fast internet these depot downloads usually take a minute or two to resolve.
 
-Once finished the console will tell you the location the old game version was downloaded to, 
-such as 
+Once finished the console will tell you the location the old game version was downloaded to,
+such as
+
 ```
 Depot download complete : "C:\Program Files (x86)\Steam\steamapps\content\app_960090\depot_960091"
 ```
 
 ![Fresh Depot Screenshot](ScreenshotDepot.png)
 
-From there it's recommended that you make a new folder next to the normal BloonsTD6 folder and move the contents of the depot there.
+From there it's recommended that you make a new folder next to the normal BloonsTD6 folder and move the contents of the
+depot there.
 For making this mod I used a path such as `C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6v42`
 
 ### Install MelonLoader and Mod Helper
 
-Now that you have the old build, simply follow the standard [Mod Helper Install Guide](https://gurrenm3.github.io/BTD-Mod-Helper/wiki/Install-Guide), 
+Now that you have the old build, simply follow the
+standard [Mod Helper Install Guide](https://gurrenm3.github.io/BTD-Mod-Helper/wiki/Install-Guide),
 except you'll need to install an old build of Mod Helper appropriate for the version you've downloaded.
 The table above contains the links to the recommended downloads of Mod Helper for each of the game versions.
 
@@ -290,7 +304,8 @@ The table above contains the links to the recommended downloads of Mod Helper fo
 
 ### Install this Mod
 
-Finally, download the appropriate OldBtd6Helper.dll and put it in the Mods folder. The corresponding versions are also listed in the table above.
+Finally, download the appropriate OldBtd6Helper.dll and put it in the Mods folder. The corresponding versions are also
+listed in the table above.
 
 ![Mods Folder Screenshot](ScreenshotMods.png)
 
